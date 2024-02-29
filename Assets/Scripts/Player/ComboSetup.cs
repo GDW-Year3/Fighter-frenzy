@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,8 +24,11 @@ public class ComboSetup : MonoBehaviour
     float m_timer = 0f;
     float m_leeway = 0f;
     bool m_skip = false;
+
+    private Player m_thisPlayer;
     void Start()
     {
+        m_thisPlayer = GetComponent<Player>();
         m_animator = GetComponentInChildren<Animator>();
         PrimeCombos();
     }
@@ -131,6 +133,8 @@ public class ComboSetup : MonoBehaviour
     }
     private IEnumerator RunAttack(Attack att)
     {
+        m_thisPlayer.Source.clip = m_thisPlayer.SFXAtk[(int)Random.Range(0f, m_thisPlayer.SFXAtk.Length - 1f)];
+        m_thisPlayer.Source.Play();
         att.m_running = true;
         m_animator.SetInteger("attack", att.m_index);
         foreach (DMGDealer d in att.m_attackingPartsList)
