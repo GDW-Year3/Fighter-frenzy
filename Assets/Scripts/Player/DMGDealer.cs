@@ -36,6 +36,7 @@ public class DMGDealer : MonoBehaviour
     }
     public bool Hit
     {
+        get { return m_hit; }
         set { m_hit = value; }
     }
     public float Damage

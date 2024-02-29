@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
 
     private int m_currentChain = 0;
 
+    private float m_chainTimer = 0f;
     private float m_currentHp;
     private float m_currentDMG;
 
@@ -37,6 +38,8 @@ public class Player : MonoBehaviour
     private UIAnimation HPBar;
 
     private UserInput m_userInput;
+
+    private DMGDealer[] dMGDealers;
     void Start()
     {
         m_animator = GetComponentInChildren<Animator>();
@@ -46,10 +49,17 @@ public class Player : MonoBehaviour
         m_currentHp = m_maxHp;
         m_currentDMG = m_baseAttack;
         HPBar = Instantiate(HPBarPrefabs[m_userInput.ID], FindObjectOfType<Canvas>().transform);
+        dMGDealers = GetComponentsInChildren<DMGDealer>();
     }
     void Update()
     {
         if (m_isDead) return;
+        foreach(DMGDealer d in dMGDealers)
+        {
+            if (d.Hit) { m_currentChain++; m_chainTimer = 0f; }
+        }
+        if (m_currentChain > 0) m_chainTimer += Time.deltaTime;
+        if (m_chainTimer > 2f) m_currentChain = 0;
         HPBar.SliderBar(m_maxHp, m_currentHp);
 
         if (m_comboMulti < 1f) m_comboMulti = 1f;
@@ -104,26 +114,14 @@ public class Player : MonoBehaviour
         m_animator.SetInteger(s, 0);
     }
     public bool IsDead => m_isDead;
-    public float CurrentDMG
-    {
-        get { return m_currentDMG; }
-    }
+    public float CurrentDMG => m_currentDMG;
     public bool IsAttacking
     {
         get { return m_isAttacking; }
         set { m_isAttacking = value; }
     }
     public Rigidbody RB => m_rb;
-    public AudioSource Source
-    {
-        get { return m_audioSource; }
-    }
-    public AudioClip[] SFXAtk
-    {
-        get { return AttackSFX; }
-    }
-    public AudioClip[] SFXsteps
-    {
-        get { return StepsSFX; }
-    }
+    public AudioSource Source => m_audioSource;
+    public AudioClip[] SFXAtk => AttackSFX;
+    public AudioClip[] SFXsteps => StepsSFX;
 }
