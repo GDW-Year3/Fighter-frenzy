@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     [Header("Animations")]
     [SerializeField] private AnimationClip[] deathClips;
     [SerializeField] private AnimationClip[] hitClips;
+    [Header("Colors")]
+    [SerializeField] private List<Material> m_materials = new List<Material>();
 
     private bool m_isGrounded = true;
     private bool m_isAttacking = false;
@@ -123,4 +125,5 @@ public class Player : MonoBehaviour
     public AudioSource Source => m_audioSource;
     public AudioClip[] SFXAtk => AttackSFX;
     public AudioClip[] SFXsteps => StepsSFX;
+    public List<Material> Materials => m_materials;
 }
