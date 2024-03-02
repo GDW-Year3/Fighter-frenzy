@@ -18,6 +18,9 @@ public class DMGDealer : MonoBehaviour
     }
     private void UseAttack(Player p)
     {
+        m_player.Source.clip = m_player.SFXAtk[(int)Random.Range(0f, m_player.SFXAtk.Length - 1f)];
+        m_player.Source.Play();
+        Debug.Log(m_player.Source.clip);
         p.TakeDamage(m_canBeBlocked, m_damage);
     }
     private void OnTriggerEnter(Collider other)

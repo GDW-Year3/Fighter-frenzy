@@ -11,12 +11,13 @@ public class Player : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float m_walkSpeed;
     [SerializeField] private float m_strafeSpeed;
-
+    [Header("Prefabs")]
     [SerializeField] private UIAnimation[] HPBarPrefabs;
+    [Header("SFX")]
     [SerializeField] private AudioClip[] HitSFX;
     [SerializeField] private AudioClip[] StepsSFX;
     [SerializeField] private AudioClip[] AttackSFX;
-
+    [Header("Animations")]
     [SerializeField] private AnimationClip[] deathClips;
     [SerializeField] private AnimationClip[] hitClips;
 
@@ -32,20 +33,17 @@ public class Player : MonoBehaviour
 
     private Animator m_animator;
     private AudioSource m_audioSource;
-
     private Rigidbody m_rb;
 
     private UIAnimation HPBar;
-
     private UserInput m_userInput;
-
     private DMGDealer[] dMGDealers;
     void Start()
     {
         m_animator = GetComponentInChildren<Animator>();
         m_userInput = GetComponent<UserInput>();
         m_rb = GetComponent<Rigidbody>();
-        m_audioSource = FindObjectOfType<CameraCTRL>().GetComponent<AudioSource>();
+        m_audioSource = GetComponent<AudioSource>();
         m_currentHp = m_maxHp;
         m_currentDMG = m_baseAttack;
         HPBar = Instantiate(HPBarPrefabs[m_userInput.ID], FindObjectOfType<Canvas>().transform);
@@ -84,6 +82,7 @@ public class Player : MonoBehaviour
     }
     public void TakeDamage(bool blockable, float d)
     {
+        if (m_isDead) return;
         m_audioSource.clip = HitSFX[(int) Random.Range(0f, HitSFX.Length - 1f)];
         m_audioSource.Play();
         int i = (int)Random.Range(0f, hitClips.Length - 1f);
