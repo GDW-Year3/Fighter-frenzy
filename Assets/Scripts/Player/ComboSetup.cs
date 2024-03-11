@@ -24,9 +24,12 @@ public class ComboSetup : MonoBehaviour
     float m_timer = 0f;
     float m_leeway = 0f;
     bool m_skip = false;
+
+    private Player m_player;
     void Start()
     {
         m_animator = GetComponentInChildren<Animator>();
+        m_player = GetComponent<Player>();
         PrimeCombos();
     }
     void PrimeCombos()
@@ -44,6 +47,7 @@ public class ComboSetup : MonoBehaviour
     }
     void Update()
     {
+        if (m_player.IsDead) return;
         if (m_currentCombos.Count > 0)
         {
             m_leeway += Time.deltaTime;

@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float m_walkSpeed;
     [SerializeField] private float m_strafeSpeed;
+    [SerializeField] private float m_moveDelayAfterHit;
     [Header("Prefabs")]
     [SerializeField] private UIAnimation[] HPBarPrefabs;
     [Header("SFX")]
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour
     private bool m_isGrounded = true;
     private bool m_isAttacking = false;
     private bool m_isDead = false;
+    private bool m_hitRecover = false;
 
     private int m_currentChain = 0;
 
@@ -67,6 +69,8 @@ public class Player : MonoBehaviour
         m_currentDMG = m_baseAttack * m_comboMulti * m_chainMulti;
 
         m_isGrounded = CheckGround();
+
+        if (m_hitRecover) return;
 
         if (m_userInput.Vertin != 0f || m_userInput.Horzin != 0f)
         {
@@ -113,6 +117,12 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(t);
         m_animator.SetInteger(s, 0);
+    }
+    private IEnumerator DelayAfterHit()
+    {
+        m_hitRecover = true;
+        yield return new WaitForSeconds(m_moveDelayAfterHit);
+        m_hitRecover = false;
     }
     public bool IsDead => m_isDead;
     public float CurrentDMG => m_currentDMG;
