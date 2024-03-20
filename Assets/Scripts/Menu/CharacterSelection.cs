@@ -26,13 +26,13 @@ public class CharacterSelection : MonoBehaviour
     [SerializeField] private int playerNumber;
 
 
-    public static CharacterSelection instance;
+    //public static CharacterSelection instance;
 
     GameObject CharacterPlayer1Showcase;
     GameObject CharacterPlayer2Showcase;
 
     List<CharacterSelectButton> characterButtonList = new List<CharacterSelectButton>();
-
+    /*
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -45,7 +45,7 @@ public class CharacterSelection : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
-
+    */
 
     // Start is called before the first frame update
     void Start()
@@ -134,7 +134,11 @@ public class CharacterSelection : MonoBehaviour
             //currentCharacterPlayer1
             //currentCharacterPlayer2
 
-            //next scene
+            CharacterTracker.instance.setMyCharacterPlayer1(currentCharacterPlayer1);
+            CharacterTracker.instance.setMyCharacterPlayer2(currentCharacterPlayer2);
+
+            /// load the next scene
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
     }

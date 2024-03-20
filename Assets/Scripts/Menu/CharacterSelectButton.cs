@@ -14,13 +14,16 @@ public class CharacterSelectButton : MonoBehaviour
     //[SerializeField] private GameObject myCharacter;
     //[SerializeField] private GameObject currentCharacter;
 
+
     //[SerializeField] private float Offset;
 
-    
+    public CharacterSelection CharacterSelection;
+
     public GameObject myCharacter;
 
     void Start()
     {
+        CharacterSelection = FindAnyObjectByType<CharacterSelection>();
         //currentCharacter = null;
     }
 
@@ -36,7 +39,7 @@ public class CharacterSelectButton : MonoBehaviour
     public void OnClick()
     {
 
-        CharacterSelection.instance.OnLoadCharacter(myCharacter);
+        CharacterSelection.OnLoadCharacter(myCharacter);
 
         //Instantiate(myCharacter, currentCharacter.transform.position, Quaternion.identity);
         //Destroy(currentCharacter);
