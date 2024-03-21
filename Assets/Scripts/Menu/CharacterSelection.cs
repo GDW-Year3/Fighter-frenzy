@@ -31,6 +31,8 @@ public class CharacterSelection : MonoBehaviour
     GameObject CharacterPlayer1Showcase;
     GameObject CharacterPlayer2Showcase;
 
+
+
     List<CharacterSelectButton> characterButtonList = new List<CharacterSelectButton>();
     /*
     private void Awake()
@@ -90,15 +92,29 @@ public class CharacterSelection : MonoBehaviour
 
         if (playerNumber == 1)
         {
-            currentCharacterPlayer1 = Instantiate(currentCharacter, CharacterPlayer1Showcase.transform.position, Quaternion.identity);
-            currentCharacterPlayer1.SetActive(true);
-            Debug.Log("Loaded Character");
+
+            GameObject showcaseCharacter1 = Instantiate(currentCharacter, CharacterPlayer1Showcase.transform.position, Quaternion.identity);
+            showcaseCharacter1.SetActive(true);
+
+            //currentCharacterPlayer1 = Instantiate(currentCharacter, CharacterPlayer1Showcase.transform.position, Quaternion.identity);
+            //currentCharacterPlayer1.SetActive(true);
+
+            currentCharacterPlayer1 = currentCharacter;
+
+            //Debug.Log("Loaded Character");
         }
         else if(playerNumber == 2)
         {
-            currentCharacterPlayer2 = Instantiate(currentCharacter, CharacterPlayer2Showcase.transform.position, Quaternion.identity);
-            currentCharacterPlayer2.SetActive(true);
-            Debug.Log("Loaded Character");
+
+            GameObject showcaseCharacter2 = Instantiate(currentCharacter, CharacterPlayer2Showcase.transform.position, Quaternion.identity);
+            showcaseCharacter2.SetActive(true);
+
+            //currentCharacterPlayer2 = Instantiate(currentCharacter, CharacterPlayer2Showcase.transform.position, Quaternion.identity);
+            //currentCharacterPlayer2.SetActive(true);
+
+            currentCharacterPlayer2 = currentCharacter;
+
+            //Debug.Log("Loaded Character");
         }
 
         //GameObject currentCharacter;
@@ -114,6 +130,8 @@ public class CharacterSelection : MonoBehaviour
             player1ConfirmButton.SetActive(false);
             player2ConfirmButton.SetActive(true);
 
+
+
             playerNumber = 2;
         }
         else if(playerNumber == 2)
@@ -127,6 +145,9 @@ public class CharacterSelection : MonoBehaviour
             }
 
             playerNumber = 3;
+
+            
+
         }
         else if(playerNumber == 3)
         {
@@ -134,11 +155,19 @@ public class CharacterSelection : MonoBehaviour
             //currentCharacterPlayer1
             //currentCharacterPlayer2
 
+            UserInput userInput1 = currentCharacterPlayer1.GetComponent<UserInput>();
+            UserInput userInput2 = currentCharacterPlayer2.GetComponent<UserInput>();
+
+            userInput1.setMyID(0);
+            userInput2.setMyID(1);
+
             CharacterTracker.instance.setMyCharacterPlayer1(currentCharacterPlayer1);
             CharacterTracker.instance.setMyCharacterPlayer2(currentCharacterPlayer2);
 
-            /// load the next scene
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+
+            // load the next scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
     }

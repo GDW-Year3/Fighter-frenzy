@@ -5,10 +5,12 @@ using UnityEngine.TextCore.Text;
 
 public class CharacterTracker : MonoBehaviour
 {
-    private GameObject characterPlayer1;
-    private GameObject characterPlayer2;
+    [SerializeField] private GameObject characterPlayer1;
+    [SerializeField] private GameObject characterPlayer2;
 
     public static CharacterTracker instance;
+
+    bool yep = false;
 
 
     private void Awake()
@@ -21,6 +23,18 @@ public class CharacterTracker : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            
+        }
+    }
+
+    private void Update()
+    {
+        
+        if (characterPlayer1 != null && characterPlayer2 != null && yep == false)
+        {
+            DontDestroyOnLoad(characterPlayer1);
+            DontDestroyOnLoad(characterPlayer2);
+            yep = true;
         }
     }
 
@@ -44,5 +58,12 @@ public class CharacterTracker : MonoBehaviour
     public GameObject getMyCharacterPlayer2()
     {
         return characterPlayer2;
+    }
+
+
+    public void DestroyAllPlayers()
+    {
+        Destroy(characterPlayer1);
+        Destroy(characterPlayer2);
     }
 }

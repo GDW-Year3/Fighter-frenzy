@@ -21,6 +21,8 @@ public class CharacterSelectButton : MonoBehaviour
 
     public GameObject myCharacter;
 
+    //public int characterID;
+
     void Start()
     {
         CharacterSelection = FindAnyObjectByType<CharacterSelection>();
@@ -32,6 +34,7 @@ public class CharacterSelectButton : MonoBehaviour
         //Texture2D texture = AssetPreview.GetMiniThumbnail(myCharacter);
         //thumbnailImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.width), new Vector2(0.5f,0.5f));
         myCharacter = newCharacter;
+        //characterID = ID;
 
     }
 
