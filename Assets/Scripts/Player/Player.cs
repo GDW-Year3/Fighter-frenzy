@@ -52,18 +52,9 @@ public class Player : MonoBehaviour
         m_currentDMG = m_baseAttack;
         HPBar = Instantiate(HPBarPrefabs[m_userInput.ID], FindObjectOfType<Canvas>().transform);
         dMGDealers = GetComponentsInChildren<DMGDealer>();
-
-        if (gameObject.tag == "Player2")
-        {
-            m_walkSpeed = m_walkSpeed * -1;
-            m_strafeSpeed = m_strafeSpeed * -1;
-        }
-
     }
     void Update()
     {
-        
-
         if (m_isDead) return;
         foreach(DMGDealer d in dMGDealers)
         {

@@ -1500,8 +1500,10 @@ MonoBehaviour:
   currentCharacterPlayer1: {fileID: 1674514000}
   currentCharacterPlayer2: {fileID: 294903569}
   characters:
-  - {fileID: 3051637158422527710, guid: f44dc588fb7f58d4684d113af03eca4d, type: 3}
-  - {fileID: 4218776459016700625, guid: 462acf10b9935fb4bad52f89bbc05821, type: 3}
+  - {fileID: 3156599805075098199, guid: 107510bde192e1845a4a58bd7e8fbbc5, type: 3}
+  - {fileID: 4371999707944562607, guid: c6af464139bebd64da1e116032c2a7e1, type: 3}
+  - {fileID: 4228464404014015998, guid: 3c39ab26e8564a340b71505d85b28eb7, type: 3}
+  - {fileID: 3801834977230138043, guid: 0317593c47b57f84faa1d23cf373849f, type: 3}
   playerNumber: 0
 --- !u!1 &1673956131
 GameObject:
