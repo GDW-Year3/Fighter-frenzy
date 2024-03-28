@@ -18,11 +18,15 @@ public class CharacterLoader : MonoBehaviour
 
         if (playerNumber == 1)
         {
-            currentCharacterPlayer1 = Instantiate(CharacterTracker.instance.getMyCharacterPlayer1(), this.transform.position, this.transform.rotation);
+            currentCharacterPlayer1 = CharacterTracker.instance.getMyCharacterPlayer1();
+            currentCharacterPlayer1.transform.position = this.transform.position;
+            currentCharacterPlayer1.transform.rotation = this.transform.rotation;
             currentCharacterPlayer1.SetActive(true);
             currentCharacterPlayer1.layer = 6;
             currentCharacterPlayer1.tag = "Player1";
 
+            currentCharacterPlayer1.GetComponent<Player>().Initialize();
+            currentCharacterPlayer1.GetComponent<Animator>().applyRootMotion = false;
 
             Debug.Log("Loaded Character");
 
@@ -31,10 +35,17 @@ public class CharacterLoader : MonoBehaviour
         }
         else if (playerNumber == 2)
         {
-            currentCharacterPlayer2 = Instantiate(CharacterTracker.instance.getMyCharacterPlayer2(), this.transform.position, this.transform.rotation);
+            currentCharacterPlayer2 = CharacterTracker.instance.getMyCharacterPlayer2();
+            currentCharacterPlayer2.transform.position = this.transform.position;
+            currentCharacterPlayer2.transform.rotation = this.transform.rotation;
             currentCharacterPlayer2.SetActive(true);
             currentCharacterPlayer2.layer = 7;
             currentCharacterPlayer2.tag = "Player2";
+
+            currentCharacterPlayer2.GetComponent<Player>().Initialize();
+            currentCharacterPlayer2.GetComponent<Animator>().applyRootMotion = false;
+
+
             Debug.Log("Loaded Character");
 
             

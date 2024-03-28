@@ -50,14 +50,10 @@ public class Player : MonoBehaviour
         m_audioSource = GetComponent<AudioSource>();
         m_currentHp = m_maxHp;
         m_currentDMG = m_baseAttack;
-        HPBar = Instantiate(HPBarPrefabs[m_userInput.ID], FindObjectOfType<Canvas>().transform);
+        //HPBar = Instantiate(HPBarPrefabs[m_userInput.ID], FindObjectOfType<Canvas>().transform);
         dMGDealers = GetComponentsInChildren<DMGDealer>();
 
-        if (gameObject.tag == "Player2")
-        {
-            m_walkSpeed = m_walkSpeed * -1;
-            m_strafeSpeed = m_strafeSpeed * -1;
-        }
+        
 
     }
     void Update()
@@ -71,7 +67,7 @@ public class Player : MonoBehaviour
         }
         if (m_currentChain > 0) m_chainTimer += Time.deltaTime;
         if (m_chainTimer > 2f) m_currentChain = 0;
-        HPBar.SliderBar(m_maxHp, m_currentHp);
+        HPBar?.SliderBar(m_maxHp, m_currentHp);
 
         if (m_comboMulti < 1f) m_comboMulti = 1f;
         if (m_chainMulti < 1f) m_chainMulti = 1f;
@@ -140,6 +136,17 @@ public class Player : MonoBehaviour
         get { return m_isAttacking; }
         set { m_isAttacking = value; }
     }
+
+    public void Initialize()
+    {
+        HPBar = Instantiate(HPBarPrefabs[m_userInput.ID], FindObjectOfType<Canvas>().transform);
+        if (gameObject.tag == "Player2")
+        {
+            m_walkSpeed = m_walkSpeed * -1;
+            m_strafeSpeed = m_strafeSpeed * -1;
+        }
+    }
+
     public Rigidbody RB => m_rb;
     public AudioSource Source => m_audioSource;
     public AudioClip[] SFXAtk => AttackSFX;

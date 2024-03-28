@@ -16,8 +16,11 @@ public class CharacterSelection : MonoBehaviour
     [SerializeField] private GameObject FinalConfirmButton;
 
 
-    [SerializeField] private GameObject currentCharacterPlayer1;
-    [SerializeField] private GameObject currentCharacterPlayer2;
+    //[SerializeField] private GameObject currentCharacterPlayer1;
+    //[SerializeField] private GameObject currentCharacterPlayer2;
+
+    [SerializeField] private Transform player1SpawnPoint;
+    [SerializeField] private Transform player2SpawnPoint;
 
 
 
@@ -30,6 +33,10 @@ public class CharacterSelection : MonoBehaviour
 
     GameObject CharacterPlayer1Showcase;
     GameObject CharacterPlayer2Showcase;
+
+    
+
+    //GameObject showcaseCharacter1;
 
 
 
@@ -57,8 +64,8 @@ public class CharacterSelection : MonoBehaviour
         player2ConfirmButton.SetActive(false);
         FinalConfirmButton.SetActive(false);
 
-        CharacterPlayer1Showcase = currentCharacterPlayer1;
-        CharacterPlayer2Showcase = currentCharacterPlayer2;
+        //CharacterPlayer1Showcase = currentCharacterPlayer1;
+        //CharacterPlayer2Showcase = currentCharacterPlayer2;
 
         for (int i = 0; i < characters.Length; i++)
         {
@@ -74,45 +81,42 @@ public class CharacterSelection : MonoBehaviour
         
     }
 
-    public void OnLoadCharacter(GameObject currentCharacter)
+    public void OnLoadCharacter(GameObject loadedCharacter)
     {
         //Instantiate(myCharacter, currentCharacter.transform.position, Quaternion.identity);
         //Destroy(currentCharacter);  
 
-        if(currentCharacterPlayer1 != CharacterPlayer1Showcase && playerNumber == 1)
+        if(CharacterPlayer1Showcase != loadedCharacter && playerNumber == 1)
         {
-            Destroy(currentCharacterPlayer1);
-            currentCharacterPlayer1 = CharacterPlayer1Showcase;
+            //DestroyImmediate(currentCharacterPlayer1, true);
+            Destroy(CharacterPlayer1Showcase);
+            //currentCharacterPlayer1 = CharacterPlayer1Showcase;
         }
-        else if (currentCharacterPlayer2 != CharacterPlayer2Showcase && playerNumber == 2)
+        else if (CharacterPlayer2Showcase != loadedCharacter && playerNumber == 2)
         {
-            Destroy(currentCharacterPlayer2);
-            currentCharacterPlayer2 = CharacterPlayer2Showcase;
+            Destroy(CharacterPlayer2Showcase);
         }
 
         if (playerNumber == 1)
         {
 
-            GameObject showcaseCharacter1 = Instantiate(currentCharacter, CharacterPlayer1Showcase.transform.position, Quaternion.identity);
-            showcaseCharacter1.SetActive(true);
+            CharacterPlayer1Showcase = Instantiate(loadedCharacter, player1SpawnPoint.position, Quaternion.identity);
+            //showcaseCharacter1.SetActive(true);
 
             //currentCharacterPlayer1 = Instantiate(currentCharacter, CharacterPlayer1Showcase.transform.position, Quaternion.identity);
             //currentCharacterPlayer1.SetActive(true);
 
-            currentCharacterPlayer1 = currentCharacter;
+            //currentCharacterPlayer1 = currentCharacter;
 
             //Debug.Log("Loaded Character");
         }
         else if(playerNumber == 2)
         {
 
-            GameObject showcaseCharacter2 = Instantiate(currentCharacter, CharacterPlayer2Showcase.transform.position, Quaternion.identity);
-            showcaseCharacter2.SetActive(true);
+            CharacterPlayer2Showcase = Instantiate(loadedCharacter, player2SpawnPoint.position, Quaternion.identity);
 
-            //currentCharacterPlayer2 = Instantiate(currentCharacter, CharacterPlayer2Showcase.transform.position, Quaternion.identity);
-            //currentCharacterPlayer2.SetActive(true);
 
-            currentCharacterPlayer2 = currentCharacter;
+
 
             //Debug.Log("Loaded Character");
         }
@@ -155,14 +159,14 @@ public class CharacterSelection : MonoBehaviour
             //currentCharacterPlayer1
             //currentCharacterPlayer2
 
-            UserInput userInput1 = currentCharacterPlayer1.GetComponent<UserInput>();
-            UserInput userInput2 = currentCharacterPlayer2.GetComponent<UserInput>();
+            UserInput userInput1 = CharacterPlayer1Showcase.GetComponent<UserInput>();
+            UserInput userInput2 = CharacterPlayer2Showcase.GetComponent<UserInput>();
 
             userInput1.setMyID(0);
             userInput2.setMyID(1);
 
-            CharacterTracker.instance.setMyCharacterPlayer1(currentCharacterPlayer1);
-            CharacterTracker.instance.setMyCharacterPlayer2(currentCharacterPlayer2);
+            CharacterTracker.instance.setMyCharacterPlayer1(CharacterPlayer1Showcase);
+            CharacterTracker.instance.setMyCharacterPlayer2(CharacterPlayer2Showcase);
 
 
 
