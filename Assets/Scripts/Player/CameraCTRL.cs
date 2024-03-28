@@ -14,6 +14,10 @@ public class CameraCTRL : MonoBehaviour
     [SerializeField] private Player p2;
     private void Update()
     {
+        p1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<Player>();
+        p2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<Player>();
+
+
         if (!p1.IsDead) p1.transform.forward = (p2.transform.position - p1.transform.position).normalized;
         if (!p2.IsDead) p2.transform.forward = (p1.transform.position - p2.transform.position).normalized;
 

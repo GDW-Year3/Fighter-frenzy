@@ -137,6 +137,7 @@ public class CharacterSelection : MonoBehaviour
 
 
             playerNumber = 2;
+            CharacterTracker.instance.setMyCharacterPlayer1(CharacterPlayer1Showcase);
         }
         else if(playerNumber == 2)
         {
@@ -150,7 +151,7 @@ public class CharacterSelection : MonoBehaviour
 
             playerNumber = 3;
 
-            
+            CharacterTracker.instance.setMyCharacterPlayer2(CharacterPlayer2Showcase);
 
         }
         else if(playerNumber == 3)

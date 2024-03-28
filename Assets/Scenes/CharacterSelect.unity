@@ -152,8 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08f67aa7d897164c852dc0e97be48bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterPlayer1: {fileID: 0}
-  characterPlayer2: {fileID: 0}
 --- !u!4 &285439124
 Transform:
   m_ObjectHideFlags: 0
@@ -1499,15 +1497,11 @@ MonoBehaviour:
   player1ConfirmButton: {fileID: 301234704}
   player2ConfirmButton: {fileID: 1081375621}
   FinalConfirmButton: {fileID: 1338124092}
-  currentCharacterPlayer1: {fileID: 1674514000}
-  currentCharacterPlayer2: {fileID: 294903569}
   player1SpawnPoint: {fileID: 1674514001}
   player2SpawnPoint: {fileID: 294903570}
   characters:
-  - {fileID: 3156599805075098199, guid: 107510bde192e1845a4a58bd7e8fbbc5, type: 3}
-  - {fileID: 4371999707944562607, guid: c6af464139bebd64da1e116032c2a7e1, type: 3}
-  - {fileID: 4228464404014015998, guid: 3c39ab26e8564a340b71505d85b28eb7, type: 3}
-  - {fileID: 3801834977230138043, guid: 0317593c47b57f84faa1d23cf373849f, type: 3}
+  - {fileID: 4218776459016700625, guid: 462acf10b9935fb4bad52f89bbc05821, type: 3}
+  - {fileID: 3051637158422527710, guid: f44dc588fb7f58d4684d113af03eca4d, type: 3}
   playerNumber: 0
 --- !u!1 &1673956131
 GameObject:

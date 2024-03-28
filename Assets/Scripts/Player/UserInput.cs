@@ -39,4 +39,9 @@ public class UserInput : MonoBehaviour
     public int ID => m_id;
     public float Vertin => Mathf.Abs(m_vertin) > Mathf.Abs(m_Dvertin) ? m_vertin : m_Dvertin;
     public float Horzin => Mathf.Abs(m_horzin) > Mathf.Abs(m_Dhorzin) ? m_horzin : m_Dhorzin;
+
+    public void setMyID(int id)
+    {
+        m_id = id;
+    }
 }
