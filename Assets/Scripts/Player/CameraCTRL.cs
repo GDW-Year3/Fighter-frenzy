@@ -10,22 +10,10 @@ public class CameraCTRL : MonoBehaviour
     [SerializeField] private float m_playerRotSpeed;
     [SerializeField] private float m_playerRepelSpeed;
     [SerializeField] private float m_playerMinDist;
-
     [SerializeField] private Player p1;
     [SerializeField] private Player p2;
-
-    private void Start()
-    {
-        //p1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<Player>();
-        //p2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<Player>();
-    }
-
     private void Update()
     {
-
-        p1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<Player>();
-        p2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<Player>();
-
         if (!p1.IsDead) p1.transform.forward = (p2.transform.position - p1.transform.position).normalized;
         if (!p2.IsDead) p2.transform.forward = (p1.transform.position - p2.transform.position).normalized;
 
@@ -39,7 +27,4 @@ public class CameraCTRL : MonoBehaviour
         //m_target.SetPositionAndRotation(Vector3.Lerp(p1.position, p2.position, 0.5f), Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(p1.forward, Vector3.up), m_targRotSpeed * Time.deltaTime));
         //transform.SetPositionAndRotation(Vector3.Lerp(transform.position, m_target.position, m_camMoveSpeed * Time.deltaTime), Quaternion.Slerp(transform.rotation, m_target.rotation, m_camRotSpeed * Time.deltaTime));
     }
-
-    
-
 }
