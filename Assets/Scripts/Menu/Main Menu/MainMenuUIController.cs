@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class MainMenuUIController : MonoBehaviour
 {
     public GameObject[] panels;
+    public SceneHandler sceneHandler;
 
     public void SetActivePanel(int index)
     {
@@ -14,7 +16,13 @@ public class MainMenuUIController : MonoBehaviour
         {
             var active = i == index;
             var g = panels[i];
-            if (g.activeSelf != active) g.SetActive(active);
+            if (g.activeSelf != active)
+            {
+                Debug.Log("options menu open");
+                sceneHandler.FakeLoad();
+                g.SetActive(active);
+
+            }
         }
     }
 
@@ -25,17 +33,21 @@ public class MainMenuUIController : MonoBehaviour
 
     public void SetDeactivePanel(int index)
     {
+        Debug.Log("options menu closed");
+        sceneHandler.FakeLoad();
         panels[index].SetActive(false);
     }
 
-
     public void OnPlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //Open next scene in build index
+        sceneHandler.OpenNextScene();
     }
 
     public void OnQuitGame()
     {
-        Application.Quit();
+        //Quit Game
+        sceneHandler.QuitGame();
     }
+
 }
