@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterLoader : MonoBehaviour
 {
-    
+    public bool ran = false;
     [SerializeField] private int playerNumber;
 
     public CameraCTRL cameraCtrl;
@@ -12,16 +12,18 @@ public class CharacterLoader : MonoBehaviour
     GameObject currentCharacterPlayer1;
     GameObject currentCharacterPlayer2;
 
-    private void Awake()
+    private void Update()
     {
-        
-
+        if (ran) return;
         if (playerNumber == 1)
         {
             currentCharacterPlayer1 = CharacterTracker.instance.getMyCharacterPlayer1();
-            currentCharacterPlayer1.transform.position = this.transform.position;
-            currentCharacterPlayer1.transform.rotation = this.transform.rotation;
+            currentCharacterPlayer1.transform.SetPositionAndRotation(this.transform.position, this.transform.rotation);
             currentCharacterPlayer1.SetActive(true);
+            foreach (Transform t in GetAllChildren(currentCharacterPlayer1.transform))
+            {
+                t.gameObject.layer = 6;
+            }
             currentCharacterPlayer1.layer = 6;
             currentCharacterPlayer1.tag = "Player1";
 
@@ -29,36 +31,34 @@ public class CharacterLoader : MonoBehaviour
             currentCharacterPlayer1.GetComponent<Animator>().applyRootMotion = false;
 
             Debug.Log("Loaded Character");
-
-            
-
+            ran = true;
         }
         else if (playerNumber == 2)
         {
             currentCharacterPlayer2 = CharacterTracker.instance.getMyCharacterPlayer2();
-            currentCharacterPlayer2.transform.position = this.transform.position;
-            currentCharacterPlayer2.transform.rotation = this.transform.rotation;
+            currentCharacterPlayer2.transform.SetPositionAndRotation(this.transform.position, this.transform.rotation);
             currentCharacterPlayer2.SetActive(true);
+            foreach (Transform t in GetAllChildren(currentCharacterPlayer2.transform))
+            {
+                t.gameObject.layer = 7;
+            }
             currentCharacterPlayer2.layer = 7;
             currentCharacterPlayer2.tag = "Player2";
 
             currentCharacterPlayer2.GetComponent<Player>().Initialize();
             currentCharacterPlayer2.GetComponent<Animator>().applyRootMotion = false;
-
-
             Debug.Log("Loaded Character");
-
-            
+            ran = true;
         }
     }
-
-    private void Update()
+    public static List<Transform> GetAllChildren(Transform parent)
     {
-        
-
-        //CharacterTracker.instance.DestroyAllPlayers();
-
+        List<Transform> children = new List<Transform>();
+        foreach (Transform child in parent)
+        {
+            children.Add(child);
+            children.AddRange(GetAllChildren(child)); // Recursive call to get sub-children
+        }
+        return children;
     }
-
-
 }
