@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TextCore.Text;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class CharacterSelection : MonoBehaviour
 {
@@ -26,13 +27,13 @@ public class CharacterSelection : MonoBehaviour
 
     [SerializeField] public GameObject[] characters;
 
-    [SerializeField] private int playerNumber;
+    public int playerNumber;
 
 
     //public static CharacterSelection instance;
 
-    GameObject CharacterPlayer1Showcase;
-    GameObject CharacterPlayer2Showcase;
+    public GameObject CharacterPlayer1Showcase;
+    public GameObject CharacterPlayer2Showcase;
 
     
 
@@ -78,9 +79,7 @@ public class CharacterSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
-
     public void OnLoadCharacter(GameObject loadedCharacter)
     {
         //Instantiate(myCharacter, currentCharacter.transform.position, Quaternion.identity);

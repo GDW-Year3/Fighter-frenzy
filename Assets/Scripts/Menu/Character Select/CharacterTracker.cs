@@ -37,7 +37,6 @@ public class CharacterTracker : MonoBehaviour
         {
             DontDestroyOnLoad(characterPlayer1);
             DontDestroyOnLoad(characterPlayer2);
-            yep = true;
         }
     }
 

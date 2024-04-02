@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterLoader : MonoBehaviour
 {
-    
+    public bool ran = false;
     [SerializeField] private int playerNumber;
 
     public CameraCTRL cameraCtrl;
@@ -12,8 +12,9 @@ public class CharacterLoader : MonoBehaviour
     GameObject currentCharacterPlayer1;
     GameObject currentCharacterPlayer2;
 
-    private void Awake()
+    private void Update()
     {
+        if (ran) return;
         if (playerNumber == 1)
         {
             currentCharacterPlayer1 = CharacterTracker.instance.getMyCharacterPlayer1();
@@ -30,6 +31,7 @@ public class CharacterLoader : MonoBehaviour
             currentCharacterPlayer1.GetComponent<Animator>().applyRootMotion = false;
 
             Debug.Log("Loaded Character");
+            ran = true;
         }
         else if (playerNumber == 2)
         {
@@ -46,6 +48,7 @@ public class CharacterLoader : MonoBehaviour
             currentCharacterPlayer2.GetComponent<Player>().Initialize();
             currentCharacterPlayer2.GetComponent<Animator>().applyRootMotion = false;
             Debug.Log("Loaded Character");
+            ran = true;
         }
     }
     public static List<Transform> GetAllChildren(Transform parent)

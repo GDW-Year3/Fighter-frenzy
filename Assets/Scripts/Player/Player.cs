@@ -44,6 +44,9 @@ public class Player : MonoBehaviour
     private DMGDealer[] dMGDealers;
     public void Initialize()
     {
+        m_currentHp = m_maxHp;
+        m_isDead = false;
+        m_animator.enabled = true;
         HPBar = Instantiate(HPBarPrefabs[m_userInput.ID], FindObjectOfType<Canvas>().transform);
         if (gameObject.CompareTag("Player2"))
         {

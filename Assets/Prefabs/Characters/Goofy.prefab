@@ -54,9 +54,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0035
-  m_Height: 0.015
+  m_Height: 0.03
   m_Direction: 1
-  m_Center: {x: 0, y: 0.005, z: 0}
+  m_Center: {x: 0, y: -0.0025, z: 0}
 --- !u!114 &4135546023114203264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,8 +135,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8798290719143771465}
-  - component: {fileID: 4535057416731513114}
   - component: {fileID: 7823776535962652640}
+  - component: {fileID: 7472307238763342251}
   m_Layer: 7
   m_Name: LeftFoot
   m_TagString: Untagged
@@ -160,8 +160,21 @@ Transform:
   - {fileID: 544850637300680154}
   m_Father: {fileID: 834868252288312212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &4535057416731513114
-CapsuleCollider:
+--- !u!114 &7823776535962652640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356180100873997603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61397edeed48f2e49a7ca3e6b27d6a9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_canBeBlocked: 1
+--- !u!65 &7472307238763342251
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -178,24 +191,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.003
-  m_Height: 0.02
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.007, z: 0.0005}
---- !u!114 &7823776535962652640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356180100873997603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61397edeed48f2e49a7ca3e6b27d6a9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_canBeBlocked: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01, y: 0.02, z: 0.04}
+  m_Center: {x: 0, y: 0.006, z: -0.0175}
 --- !u!1 &369344736691033454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,9 +1595,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0035
-  m_Height: 0.015
+  m_Height: 0.03
   m_Direction: 1
-  m_Center: {x: 0, y: 0.005, z: 0}
+  m_Center: {x: 0, y: -0.0025, z: 0}
 --- !u!114 &6631955363444404669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2555,8 +2553,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5584239504562088230}
-  - component: {fileID: 6839013333286414178}
   - component: {fileID: 7843149106638248810}
+  - component: {fileID: 5815732900646339358}
   m_Layer: 7
   m_Name: RightFoot
   m_TagString: Untagged
@@ -2580,8 +2578,21 @@ Transform:
   - {fileID: 3969213225912841445}
   m_Father: {fileID: 4627389807157888611}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &6839013333286414178
-CapsuleCollider:
+--- !u!114 &7843149106638248810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7783090802181414884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61397edeed48f2e49a7ca3e6b27d6a9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_canBeBlocked: 1
+--- !u!65 &5815732900646339358
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2598,24 +2609,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.003
-  m_Height: 0.02
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.007, z: 0.0005}
---- !u!114 &7843149106638248810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7783090802181414884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61397edeed48f2e49a7ca3e6b27d6a9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_canBeBlocked: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01, y: 0.02, z: 0.04}
+  m_Center: {x: 0, y: 0.006, z: -0.0175}
 --- !u!1 &7831102905308935831
 GameObject:
   m_ObjectHideFlags: 0

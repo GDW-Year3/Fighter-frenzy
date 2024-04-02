@@ -10,16 +10,18 @@ public class CameraCTRL : MonoBehaviour
     [SerializeField] private float m_playerRotSpeed;
     [SerializeField] private float m_playerRepelSpeed;
     [SerializeField] private float m_playerMinDist;
-    [SerializeField] private Player m_p1;
-    [SerializeField] private Player m_p2;
+    private Player m_p1;
+    private Player m_p2;
     [SerializeField] private GameObject m_endScreen;
     [SerializeField] private TextMeshProUGUI m_endText;
-    private void Update()
+    private void FindPlayers()
     {
         m_p1 = GameObject.FindGameObjectWithTag("Player1").GetComponent<Player>();
         m_p2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<Player>();
-
-
+    }
+    private void Update()
+    {
+        if (m_p1 == null || m_p2 == null) FindPlayers();
         if (!m_p1.IsDead) m_p1.transform.forward = (m_p2.transform.position - m_p1.transform.position).normalized;
         if (!m_p2.IsDead) m_p2.transform.forward = (m_p1.transform.position - m_p2.transform.position).normalized;
 
