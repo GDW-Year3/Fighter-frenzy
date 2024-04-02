@@ -7,6 +7,10 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class CharacterSelection : MonoBehaviour
 {
+    //Reference to scenehandler script
+    public SceneHandler sceneHandler;
+
+
     [SerializeField] private CharacterSelectButton buttonPrefab;
     [SerializeField] private Transform contents;
     //[SerializeField] private GameObject myCharacter;
@@ -172,7 +176,7 @@ public class CharacterSelection : MonoBehaviour
 
 
             // load the next scene
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            sceneHandler.OpenNextScene();
         }
 
     }
