@@ -42,6 +42,15 @@ public class Player : MonoBehaviour
     private UIAnimation HPBar;
     private UserInput m_userInput;
     private DMGDealer[] dMGDealers;
+    public void Initialize()
+    {
+        HPBar = Instantiate(HPBarPrefabs[m_userInput.ID], FindObjectOfType<Canvas>().transform);
+        if (gameObject.CompareTag("Player2"))
+        {
+            m_walkSpeed *= -1;
+            m_strafeSpeed *= -1;
+        }
+    }
     void Start()
     {
         m_animator = GetComponentInChildren<Animator>();
@@ -67,7 +76,7 @@ public class Player : MonoBehaviour
         }
         if (m_currentChain > 0) m_chainTimer += Time.deltaTime;
         if (m_chainTimer > 2f) m_currentChain = 0;
-        HPBar?.SliderBar(m_maxHp, m_currentHp);
+        if (HPBar != null) HPBar.SliderBar(m_maxHp, m_currentHp);
 
         if (m_comboMulti < 1f) m_comboMulti = 1f;
         if (m_chainMulti < 1f) m_chainMulti = 1f;
@@ -112,7 +121,7 @@ public class Player : MonoBehaviour
         int i = (int)Random.Range(0f, deathClips.Length - 1f);
         AnimationClip c = deathClips[i];
         m_isDead = true;
-        HPBar.SliderBar(m_maxHp, m_currentHp);
+        HPBar.SliderBar(m_maxHp, 0f);
         m_animator.SetInteger("die", i + 1);
         yield return new WaitForSeconds(c.length);
         m_animator.SetInteger("die", 0);
@@ -130,23 +139,13 @@ public class Player : MonoBehaviour
         m_hitRecover = false;
     }
     public bool IsDead => m_isDead;
-    public float CurrentDMG => m_currentDMG;
     public bool IsAttacking
     {
         get { return m_isAttacking; }
         set { m_isAttacking = value; }
     }
-
-    public void Initialize()
-    {
-        HPBar = Instantiate(HPBarPrefabs[m_userInput.ID], FindObjectOfType<Canvas>().transform);
-        if (gameObject.tag == "Player2")
-        {
-            m_walkSpeed = m_walkSpeed * -1;
-            m_strafeSpeed = m_strafeSpeed * -1;
-        }
-    }
-
+    public float CurrentDMG => m_currentDMG;
+    public float HP => m_currentHp;
     public Rigidbody RB => m_rb;
     public AudioSource Source => m_audioSource;
     public AudioClip[] SFXAtk => AttackSFX;
