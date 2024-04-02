@@ -1579,6 +1579,9 @@ MonoBehaviour:
   characters:
   - {fileID: 4218776459016700625, guid: 462acf10b9935fb4bad52f89bbc05821, type: 3}
   - {fileID: 3051637158422527710, guid: f44dc588fb7f58d4684d113af03eca4d, type: 3}
+  characterSprites:
+  - {fileID: 21300000, guid: 8790a94a831b8a1418ef21423629ec75, type: 3}
+  - {fileID: 21300000, guid: 8790a94a831b8a1418ef21423629ec75, type: 3}
   playerNumber: 0
   CharacterPlayer1Showcase: {fileID: 0}
   CharacterPlayer2Showcase: {fileID: 0}

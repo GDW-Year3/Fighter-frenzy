@@ -26,6 +26,7 @@ public class CharacterSelection : MonoBehaviour
 
 
     [SerializeField] public GameObject[] characters;
+    [SerializeField] public Sprite[] characterSprites;
 
     public int playerNumber;
 
@@ -71,7 +72,7 @@ public class CharacterSelection : MonoBehaviour
         for (int i = 0; i < characters.Length; i++)
         {
             CharacterSelectButton spawnedPrefab = Instantiate(buttonPrefab, contents);
-            spawnedPrefab.Intialize(characters[i]);
+            spawnedPrefab.Intialize(characters[i], characterSprites[i]);
             characterButtonList.Add(spawnedPrefab);
         }
     }
