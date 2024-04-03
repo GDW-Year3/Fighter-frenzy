@@ -29,7 +29,14 @@ public class DMGDealer : MonoBehaviour
         {
             UseAttack(other.gameObject.GetComponentInParent<Player>());
             m_hit = true;
+            // play attack vfx
             Debug.Log("Hit" + other.name);
+        }
+        if (other.gameObject.layer == 8)
+        {
+            m_player.Source.clip = m_player.SFXsteps[(int)Random.Range(0f, m_player.SFXAtk.Length - 1f)];
+            m_player.Source.Play();
+            // play step vfx
         }
     }
     public bool CanAttack
