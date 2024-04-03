@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.TextCore.Text;
 using static UnityEditor.Experimental.GraphView.GraphView;
@@ -11,8 +13,8 @@ public class CharacterSelection : MonoBehaviour
     public SceneHandler sceneHandler;
 
 
-    [SerializeField] private CharacterSelectButton buttonPrefab;
-    [SerializeField] private Transform contents;
+    //[SerializeField] private CharacterSelectButton buttonPrefab;
+    //[SerializeField] private Transform contents;
     //[SerializeField] private GameObject myCharacter;
 
     //Buttons
@@ -30,7 +32,7 @@ public class CharacterSelection : MonoBehaviour
 
 
     [SerializeField] public GameObject[] characters;
-    [SerializeField] public Sprite[] characterSprites;
+    //[SerializeField] public Sprite[] characterSprites;
 
     public int playerNumber;
 
@@ -46,7 +48,8 @@ public class CharacterSelection : MonoBehaviour
 
 
 
-    List<CharacterSelectButton> characterButtonList = new List<CharacterSelectButton>();
+    //List<CharacterSelectButton> characterButtonList = new List<CharacterSelectButton>();
+    public List<Button> m_buttonList = new List<Button>();
     /*
     private void Awake()
     {
@@ -73,12 +76,12 @@ public class CharacterSelection : MonoBehaviour
         //CharacterPlayer1Showcase = currentCharacterPlayer1;
         //CharacterPlayer2Showcase = currentCharacterPlayer2;
 
-        for (int i = 0; i < characters.Length; i++)
+        /*for (int i = 0; i < characters.Length; i++)
         {
-            CharacterSelectButton spawnedPrefab = Instantiate(buttonPrefab, contents);
-            spawnedPrefab.Intialize(characters[i], characterSprites[i]);
-            characterButtonList.Add(spawnedPrefab);
-        }
+            //CharacterSelectButton spawnedPrefab = Instantiate(buttonPrefab, contents);
+            //spawnedPrefab.Intialize(characters[i], characterSprites[i]);
+            //characterButtonList.Add(spawnedPrefab);
+        }*/
     }
 
     // Update is called once per frame
@@ -92,13 +95,15 @@ public class CharacterSelection : MonoBehaviour
 
         if(CharacterPlayer1Showcase != loadedCharacter && playerNumber == 1)
         {
+            CharacterPlayer1Showcase.SetActive(false);
             //DestroyImmediate(currentCharacterPlayer1, true);
-            Destroy(CharacterPlayer1Showcase);
+            //Destroy(CharacterPlayer1Showcase);
             //currentCharacterPlayer1 = CharacterPlayer1Showcase;
         }
         else if (CharacterPlayer2Showcase != loadedCharacter && playerNumber == 2)
         {
-            Destroy(CharacterPlayer2Showcase);
+            CharacterPlayer2Showcase.SetActive(false);
+            //Destroy(CharacterPlayer2Showcase);
         }
 
         if (playerNumber == 1)
@@ -148,9 +153,13 @@ public class CharacterSelection : MonoBehaviour
             player2ConfirmButton.SetActive(false);
             FinalConfirmButton.SetActive(true);
 
-            for (int i = 0; i < characterButtonList.Count; i++)
+            /*for (int i = 0; i < characterButtonList.Count; i++)
             {
                 characterButtonList[i].gameObject.SetActive(false);
+            }*/
+            foreach (Button b in m_buttonList)
+            {
+                b.gameObject.SetActive(false);
             }
 
             playerNumber = 3;
