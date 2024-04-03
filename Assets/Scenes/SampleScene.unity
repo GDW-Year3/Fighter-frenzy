@@ -3848,7 +3848,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ace58448a45d2e340b409a606f04b9fb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5542,6 +5542,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_canBeBlocked: 1
+  m_stepVFX: {fileID: 0}
+  m_hitVFX: {fileID: 0}
 --- !u!136 &432695396
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6155,6 +6157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_canBeBlocked: 1
+  m_stepVFX: {fileID: 0}
+  m_hitVFX: {fileID: 0}
 --- !u!136 &503822531
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7081,6 +7085,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_canBeBlocked: 1
+  m_stepVFX: {fileID: 0}
+  m_hitVFX: {fileID: 0}
 --- !u!136 &615803835
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11686,6 +11692,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_canBeBlocked: 1
+  m_stepVFX: {fileID: 0}
+  m_hitVFX: {fileID: 0}
 --- !u!136 &1032127469
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -26127,6 +26135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_canBeBlocked: 1
+  m_stepVFX: {fileID: 0}
+  m_hitVFX: {fileID: 0}
 --- !u!136 &6708559879044381866
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -26807,6 +26817,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_canBeBlocked: 1
+  m_stepVFX: {fileID: 0}
+  m_hitVFX: {fileID: 0}
 --- !u!4 &7837861607550155057
 Transform:
   m_ObjectHideFlags: 0
@@ -26893,6 +26905,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_canBeBlocked: 1
+  m_stepVFX: {fileID: 0}
+  m_hitVFX: {fileID: 0}
 --- !u!136 &8022873092123289154
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -27028,6 +27042,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_canBeBlocked: 1
+  m_stepVFX: {fileID: 0}
+  m_hitVFX: {fileID: 0}
 --- !u!1 &8228481481359923726
 GameObject:
   m_ObjectHideFlags: 0
