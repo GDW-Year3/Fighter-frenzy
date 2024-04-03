@@ -6,6 +6,8 @@ using UnityEngine;
 public class DMGDealer : MonoBehaviour
 {
     [SerializeField] private bool m_canBeBlocked = true;
+    [SerializeField] private ParticleSystem m_stepVFX;
+    [SerializeField] private ParticleSystem m_hitVFX;
 
     private Player m_player;
 
@@ -29,6 +31,7 @@ public class DMGDealer : MonoBehaviour
         {
             UseAttack(other.gameObject.GetComponentInParent<Player>());
             m_hit = true;
+            m_hitVFX.Play();
             // play attack vfx
             Debug.Log("Hit" + other.name);
         }
@@ -36,6 +39,7 @@ public class DMGDealer : MonoBehaviour
         {
             m_player.Source.clip = m_player.SFXsteps[(int)Random.Range(0f, m_player.SFXAtk.Length - 1f)];
             m_player.Source.Play();
+            m_stepVFX.Play();
             // play step vfx
         }
     }
