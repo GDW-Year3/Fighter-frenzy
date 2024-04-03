@@ -47,8 +47,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_canBeBlocked: 1
-  m_stepVFX: {fileID: 0}
-  m_hitVFX: {fileID: 0}
 --- !u!65 &622639939497161510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -480,8 +478,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_canBeBlocked: 1
-  m_stepVFX: {fileID: 0}
-  m_hitVFX: {fileID: 0}
 --- !u!65 &7639225252160767657
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -756,8 +752,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_canBeBlocked: 1
-  m_stepVFX: {fileID: 0}
-  m_hitVFX: {fileID: 0}
 --- !u!1 &2011946320792936947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,7 +1528,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2862,8 +2856,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_canBeBlocked: 1
-  m_stepVFX: {fileID: 0}
-  m_hitVFX: {fileID: 0}
 --- !u!1 &7747317592410998192
 GameObject:
   m_ObjectHideFlags: 0
