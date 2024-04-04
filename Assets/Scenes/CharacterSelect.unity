@@ -219,18 +219,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CharacterSelection, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &71068806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1017,7 +1005,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 2d3e4d762c5b9194389b7976a299ca85, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_Volume: 0.45
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1452,7 +1440,7 @@ MonoBehaviour:
         m_MethodName: OnLoadCharacter
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2516038638736691895, guid: 4517ff07f6285884691bca594af8d053,
+          m_ObjectArgument: {fileID: 6637622018720003420, guid: 4517ff07f6285884691bca594af8d053,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -2388,6 +2376,7 @@ MonoBehaviour:
   characters:
   - {fileID: 4218776459016700625, guid: 462acf10b9935fb4bad52f89bbc05821, type: 3}
   - {fileID: 3051637158422527710, guid: f44dc588fb7f58d4684d113af03eca4d, type: 3}
+  - {fileID: 3408196286515727482, guid: 50489e9de56bd5042bd9315b8ce191ba, type: 3}
   playerNumber: 0
   CharacterPlayer1Showcase: {fileID: 1674514000}
   CharacterPlayer2Showcase: {fileID: 294903569}

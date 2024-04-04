@@ -590,8 +590,8 @@ MonoBehaviour:
   m_blockingFactor: 1
   m_comboMulti: 0
   m_chainMulti: 0
-  m_walkSpeed: -3
-  m_strafeSpeed: -1.5
+  m_walkSpeed: 3
+  m_strafeSpeed: 1.5
   m_moveDelayAfterHit: 0.25
   HPBarPrefabs:
   - {fileID: 8548704542815291169, guid: 8397ba4803992e540829ffb2378cbfcc, type: 3}
@@ -668,7 +668,7 @@ MonoBehaviour:
     - {fileID: 0}
   m_combos: []
   m_comboLeeway: 0.2
-  m_userInput: {fileID: 0}
+  m_userInput: {fileID: -6572298443298513908}
 --- !u!54 &-202494002377888487
 Rigidbody:
   m_ObjectHideFlags: 0
