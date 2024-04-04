@@ -2376,7 +2376,7 @@ MonoBehaviour:
   characters:
   - {fileID: 4218776459016700625, guid: 462acf10b9935fb4bad52f89bbc05821, type: 3}
   - {fileID: 3051637158422527710, guid: f44dc588fb7f58d4684d113af03eca4d, type: 3}
-  - {fileID: 3408196286515727482, guid: 50489e9de56bd5042bd9315b8ce191ba, type: 3}
+  - {fileID: 6637622018720003420, guid: 4517ff07f6285884691bca594af8d053, type: 3}
   playerNumber: 0
   CharacterPlayer1Showcase: {fileID: 1674514000}
   CharacterPlayer2Showcase: {fileID: 294903569}

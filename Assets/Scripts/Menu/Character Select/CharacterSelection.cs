@@ -39,8 +39,8 @@ public class CharacterSelection : MonoBehaviour
 
     //public static CharacterSelection instance;
 
-    public GameObject CharacterPlayer1Showcase;
-    public GameObject CharacterPlayer2Showcase;
+    public GameObject CharacterPlayer1Showcase = null;
+    public GameObject CharacterPlayer2Showcase = null;
 
     
 
@@ -73,6 +73,8 @@ public class CharacterSelection : MonoBehaviour
         player2ConfirmButton.SetActive(false);
         FinalConfirmButton.SetActive(false);
 
+        CharacterPlayer1Showcase = Instantiate(characters[0], player1SpawnPoint.position, Quaternion.identity);
+        CharacterPlayer2Showcase = Instantiate(characters[1], player2SpawnPoint.position, Quaternion.identity);
         //CharacterPlayer1Showcase = currentCharacterPlayer1;
         //CharacterPlayer2Showcase = currentCharacterPlayer2;
 
@@ -146,7 +148,6 @@ public class CharacterSelection : MonoBehaviour
 
 
             playerNumber = 2;
-            CharacterTracker.instance.setMyCharacterPlayer1(CharacterPlayer1Showcase);
         }
         else if(playerNumber == 2)
         {
@@ -163,8 +164,6 @@ public class CharacterSelection : MonoBehaviour
             }
 
             playerNumber = 3;
-
-            CharacterTracker.instance.setMyCharacterPlayer2(CharacterPlayer2Showcase);
 
         }
         else if(playerNumber == 3)
