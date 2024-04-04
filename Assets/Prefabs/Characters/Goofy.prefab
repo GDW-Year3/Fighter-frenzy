@@ -1306,7 +1306,8 @@ MonoBehaviour:
     m_totalDamage: 30
     m_numHits: 1
     m_running: 0
-    m_attackingPartsList: []
+    m_attackingPartsList:
+    - {fileID: 7843149106638248810}
   B_Attack:
     m_clip: {fileID: -203655887218126122, guid: 9c617053d2061264d8308ba0f028ae78,
       type: 3}

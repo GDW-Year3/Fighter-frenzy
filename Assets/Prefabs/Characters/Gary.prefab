@@ -1940,7 +1940,7 @@ MonoBehaviour:
     m_numHits: 1
     m_running: 0
     m_attackingPartsList:
-    - {fileID: 0}
+    - {fileID: 7540894019753955070}
   A_Attack:
     m_clip: {fileID: -203655887218126122, guid: 593c8dc7566d2644ea7ffe079c9dfa62,
       type: 3}
@@ -1960,7 +1960,7 @@ MonoBehaviour:
     m_numHits: 1
     m_running: 0
     m_attackingPartsList:
-    - {fileID: 7540894019753955070}
+    - {fileID: 7187840029286867418}
   m_combos:
   - m_inputs:
     - m_type: 1
