@@ -1499,7 +1499,25 @@ MonoBehaviour:
     m_running: 0
     m_attackingPartsList:
     - {fileID: 8552863830201652583}
-  m_combos: []
+  m_combos:
+  - m_inputs:
+    - m_type: 1
+    - m_type: 0
+    - m_type: 1
+    - m_type: 0
+    m_comboAttack:
+      m_clip: {fileID: -203655887218126122, guid: 8633eaaa4c4fb58468c93a8942438818,
+        type: 3}
+      m_index: 5
+      m_speed: 1
+      m_totalDamage: 350
+      m_numHits: 1
+      m_running: 0
+      m_attackingPartsList:
+      - {fileID: 811804762197701941}
+    m_onInputted:
+      m_PersistentCalls:
+        m_Calls: []
   m_comboLeeway: 0.2
   m_userInput: {fileID: 3104671583906365401}
 --- !u!54 &2773470138091814916

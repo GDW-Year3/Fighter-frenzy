@@ -202,11 +202,11 @@ MonoBehaviour:
       type: 3}
     m_index: 4
     m_speed: 1
-    m_totalDamage: 30
+    m_totalDamage: 150
     m_numHits: 1
     m_running: 0
     m_attackingPartsList:
-    - {fileID: 5792379995431393002}
+    - {fileID: 1913142521841393396}
   X_Attack:
     m_clip: {fileID: -203655887218126122, guid: 211dd8f7232c0864b836b98205677d0a,
       type: 3}
@@ -232,12 +232,30 @@ MonoBehaviour:
       type: 3}
     m_index: 2
     m_speed: 1.5
-    m_totalDamage: 50
+    m_totalDamage: 60
     m_numHits: 1
     m_running: 0
     m_attackingPartsList:
     - {fileID: 5792379995431393002}
-  m_combos: []
+  m_combos:
+  - m_inputs:
+    - m_type: 1
+    - m_type: 0
+    - m_type: 1
+    - m_type: 0
+    m_comboAttack:
+      m_clip: {fileID: -203655887218126122, guid: 8633eaaa4c4fb58468c93a8942438818,
+        type: 3}
+      m_index: 5
+      m_speed: 1
+      m_totalDamage: 350
+      m_numHits: 1
+      m_running: 0
+      m_attackingPartsList:
+      - {fileID: 1913142521841393396}
+    m_onInputted:
+      m_PersistentCalls:
+        m_Calls: []
   m_comboLeeway: 0.2
   m_userInput: {fileID: 1276749849648839416}
 --- !u!54 &1231662944019025331
