@@ -3329,6 +3329,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zhen
       objectReference: {fileID: 0}
+    - target: {fileID: 9108600854112979777, guid: 81e4a50bd9b837c46a63c84105368944,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
