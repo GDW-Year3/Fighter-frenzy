@@ -315,7 +315,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   m_comboLeeway: 0.2
-  m_userInput: {fileID: 0}
+  m_userInput: {fileID: 722647368012440206}
 --- !u!1 &511857346476499743
 GameObject:
   m_ObjectHideFlags: 0
