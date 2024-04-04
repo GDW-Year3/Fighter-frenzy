@@ -2206,7 +2206,23 @@ MonoBehaviour:
     m_running: 0
     m_attackingPartsList:
     - {fileID: 4692766443996521508}
-  m_combos: []
+  m_combos:
+  - m_inputs:
+    - m_type: 3
+    - m_type: 3
+    m_comboAttack:
+      m_clip: {fileID: -203655887218126122, guid: 53d667bf750594742a03be65b75cb5f1,
+        type: 3}
+      m_index: 4
+      m_speed: 2
+      m_totalDamage: 150
+      m_numHits: 1
+      m_running: 0
+      m_attackingPartsList:
+      - {fileID: 2195971126949965002}
+    m_onInputted:
+      m_PersistentCalls:
+        m_Calls: []
   m_comboLeeway: 0.2
   m_userInput: {fileID: 3848966813212581187}
 --- !u!54 &1827335155461900841

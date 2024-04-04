@@ -908,9 +908,9 @@ GameObject:
   - component: {fileID: 4455260596402448055}
   - component: {fileID: 1635385815284148497}
   - component: {fileID: 7056505295000667641}
-  - component: {fileID: 5687076087585604796}
   - component: {fileID: 8590705497082822769}
   - component: {fileID: 8769792249979926904}
+  - component: {fileID: 6573113368494394289}
   m_Layer: 6
   m_Name: Geri
   m_TagString: Untagged
@@ -1018,77 +1018,6 @@ MonoBehaviour:
   - {fileID: -203655887218126122, guid: 86a03210a73397f49937874756075818, type: 3}
   - {fileID: -203655887218126122, guid: 1be9acddaed5cd641aee4dccd1d8a404, type: 3}
   m_materials: []
---- !u!114 &5687076087585604796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3300948877317159356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ce9cb92a02afdc4ab4941ab78fc3eaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Y_Attack:
-    m_clip: {fileID: -203655887218126122, guid: 53d667bf750594742a03be65b75cb5f1,
-      type: 3}
-    m_index: 4
-    m_speed: 1
-    m_totalDamage: 30
-    m_numHits: 1
-    m_running: 0
-    m_attackingPartsList:
-    - {fileID: 2244775340900316168}
-  X_Attack:
-    m_clip: {fileID: -203655887218126122, guid: 211dd8f7232c0864b836b98205677d0a,
-      type: 3}
-    m_index: 1
-    m_speed: 2
-    m_totalDamage: 20
-    m_numHits: 1
-    m_running: 0
-    m_attackingPartsList:
-    - {fileID: 2383046460543868871}
-  A_Attack:
-    m_clip: {fileID: -203655887218126122, guid: 593c8dc7566d2644ea7ffe079c9dfa62,
-      type: 3}
-    m_index: 3
-    m_speed: 1
-    m_totalDamage: 30
-    m_numHits: 1
-    m_running: 0
-    m_attackingPartsList:
-    - {fileID: 4706015648086301003}
-  B_Attack:
-    m_clip: {fileID: -203655887218126122, guid: 9c617053d2061264d8308ba0f028ae78,
-      type: 3}
-    m_index: 2
-    m_speed: 1.5
-    m_totalDamage: 50
-    m_numHits: 1
-    m_running: 0
-    m_attackingPartsList:
-    - {fileID: 4706015648086301003}
-  m_combos:
-  - m_inputs:
-    - m_type: 1
-    - m_type: 3
-    m_comboAttack:
-      m_clip: {fileID: -203655887218126122, guid: 593c8dc7566d2644ea7ffe079c9dfa62,
-        type: 3}
-      m_index: 3
-      m_speed: 2
-      m_totalDamage: 100
-      m_numHits: 1
-      m_running: 0
-      m_attackingPartsList:
-      - {fileID: 4706015648086301003}
-    m_onInputted:
-      m_PersistentCalls:
-        m_Calls: []
-  m_comboLeeway: 0.2
-  m_userInput: {fileID: 1635385815284148497}
 --- !u!54 &8590705497082822769
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1213,6 +1142,77 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6573113368494394289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3300948877317159356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce9cb92a02afdc4ab4941ab78fc3eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Y_Attack:
+    m_clip: {fileID: -203655887218126122, guid: 53d667bf750594742a03be65b75cb5f1,
+      type: 3}
+    m_index: 4
+    m_speed: 1
+    m_totalDamage: 30
+    m_numHits: 1
+    m_running: 0
+    m_attackingPartsList:
+    - {fileID: 2244775340900316168}
+  X_Attack:
+    m_clip: {fileID: -203655887218126122, guid: 211dd8f7232c0864b836b98205677d0a,
+      type: 3}
+    m_index: 1
+    m_speed: 2
+    m_totalDamage: 20
+    m_numHits: 1
+    m_running: 0
+    m_attackingPartsList:
+    - {fileID: 2383046460543868871}
+  A_Attack:
+    m_clip: {fileID: -203655887218126122, guid: 593c8dc7566d2644ea7ffe079c9dfa62,
+      type: 3}
+    m_index: 3
+    m_speed: 1
+    m_totalDamage: 30
+    m_numHits: 1
+    m_running: 0
+    m_attackingPartsList:
+    - {fileID: 4706015648086301003}
+  B_Attack:
+    m_clip: {fileID: -203655887218126122, guid: 9c617053d2061264d8308ba0f028ae78,
+      type: 3}
+    m_index: 2
+    m_speed: 1.5
+    m_totalDamage: 50
+    m_numHits: 1
+    m_running: 0
+    m_attackingPartsList:
+    - {fileID: 4706015648086301003}
+  m_combos:
+  - m_inputs:
+    - m_type: 1
+    - m_type: 3
+    m_comboAttack:
+      m_clip: {fileID: -203655887218126122, guid: 593c8dc7566d2644ea7ffe079c9dfa62,
+        type: 3}
+      m_index: 3
+      m_speed: 2
+      m_totalDamage: 100
+      m_numHits: 1
+      m_running: 0
+      m_attackingPartsList:
+      - {fileID: 4706015648086301003}
+    m_onInputted:
+      m_PersistentCalls:
+        m_Calls: []
+  m_comboLeeway: 0.2
+  m_userInput: {fileID: 0}
 --- !u!1 &3392110259640001561
 GameObject:
   m_ObjectHideFlags: 0
