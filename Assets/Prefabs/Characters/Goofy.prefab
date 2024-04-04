@@ -1256,9 +1256,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 303ebe1889428be4db73191dca1780fb, type: 3}
   - {fileID: 8300000, guid: 24b8803eb62ac6c40939d616e08ad85c, type: 3}
   AttackSFX:
-  - {fileID: 8300000, guid: e2583f5d282ee834f9448a317e824ff1, type: 3}
-  - {fileID: 8300000, guid: a8cd4f9245d633744b55084edb17b13e, type: 3}
-  - {fileID: 8300000, guid: ba11ce5c918ab8b478edfdbff07613f0, type: 3}
+  - {fileID: 8300000, guid: 25e0a8327e2c489438b1ed213fd30d85, type: 3}
+  - {fileID: 8300000, guid: df3071165e01b004f998e21a9cc9a5cf, type: 3}
+  - {fileID: 8300000, guid: 2042caf582315704291fabf5daf69859, type: 3}
   deathClips:
   - {fileID: -203655887218126122, guid: 87d783ebd460ed24d8d7220baf64fcd9, type: 3}
   - {fileID: -203655887218126122, guid: 4cae337b9f0a6d448ade9c8c41b466dc, type: 3}
