@@ -2093,7 +2093,7 @@ MonoBehaviour:
         m_MethodName: OnLoadCharacter
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 5424135405848659304, guid: b19c35f61178333499caf0b186c150b5,
+          m_ObjectArgument: {fileID: 113161288899400525, guid: f17ee52c6d8c79640b88e4f828320315,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -3044,7 +3044,7 @@ MonoBehaviour:
         m_MethodName: OnLoadCharacter
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 470514455837154066, guid: bef6e99cb05152b41b70a32c020fe282,
+          m_ObjectArgument: {fileID: 8176938492112178833, guid: 50489e9de56bd5042bd9315b8ce191ba,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
