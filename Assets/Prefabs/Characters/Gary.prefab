@@ -337,6 +337,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2332981086399583409}
+  - component: {fileID: 5840893804530357236}
+  - component: {fileID: 5510447299443914550}
   m_Layer: 0
   m_Name: foot.R
   m_TagString: Untagged
@@ -361,6 +363,42 @@ Transform:
   - {fileID: 6731618901072256866}
   m_Father: {fileID: 2368975785584619100}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5840893804530357236
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174385897915147367}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0015, y: 0.003, z: 0.006}
+  m_Center: {x: 0, y: 0.0009, z: -0.002625}
+--- !u!114 &5510447299443914550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174385897915147367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61397edeed48f2e49a7ca3e6b27d6a9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_canBeBlocked: 1
+  m_stepVFX: {fileID: 0}
+  m_hitVFX: {fileID: 0}
 --- !u!1 &1225246033785651985
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 902456697995815086}
+  - component: {fileID: 7019993736373772979}
   m_Layer: 0
   m_Name: shin.L
   m_TagString: Untagged
@@ -393,6 +432,29 @@ Transform:
   - {fileID: 6352248516353116396}
   m_Father: {fileID: 5038667156598645640}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &7019993736373772979
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225246033785651985}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.00075
+  m_Height: 0.0075
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.003, z: 0}
 --- !u!1 &1296618732624202808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,6 +1816,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6352248516353116396}
+  - component: {fileID: 9006713043668203721}
+  - component: {fileID: 2949239852066792081}
   m_Layer: 0
   m_Name: foot.L
   m_TagString: Untagged
@@ -1778,6 +1842,42 @@ Transform:
   - {fileID: 4825193738537883552}
   m_Father: {fileID: 902456697995815086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &9006713043668203721
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419562137934691824}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0015, y: 0.003, z: 0.006}
+  m_Center: {x: 0, y: 0.0009, z: -0.002625}
+--- !u!114 &2949239852066792081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419562137934691824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61397edeed48f2e49a7ca3e6b27d6a9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_canBeBlocked: 1
+  m_stepVFX: {fileID: 0}
+  m_hitVFX: {fileID: 0}
 --- !u!1 &5534527433577057396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2421,6 +2521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 449390820227227884}
+  - component: {fileID: 361183234372362341}
   m_Layer: 0
   m_Name: thigh.R
   m_TagString: Untagged
@@ -2444,6 +2545,29 @@ Transform:
   - {fileID: 2368975785584619100}
   m_Father: {fileID: 2612351850196086881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &361183234372362341
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8749818506000997575}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.00075
+  m_Height: 0.00525
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.003, z: 0}
 --- !u!1 &8768425250194316771
 GameObject:
   m_ObjectHideFlags: 0
@@ -2485,6 +2609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2368975785584619100}
+  - component: {fileID: 2975760550369276070}
   m_Layer: 0
   m_Name: shin.R
   m_TagString: Untagged
@@ -2508,6 +2633,29 @@ Transform:
   - {fileID: 2332981086399583409}
   m_Father: {fileID: 449390820227227884}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &2975760550369276070
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8774021328119925810}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.00075
+  m_Height: 0.0075
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.003, z: 0}
 --- !u!1 &9028522313274900071
 GameObject:
   m_ObjectHideFlags: 0
